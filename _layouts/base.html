@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" href="{{ "/favicon.svg" | prepend: site.baseurl }}" type="image/svg+xml"/> -->
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"> -->
+    <!-- <meta property="description" content="{{ site.description }}"> -->
+    <!-- <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> -->
+    <!-- {% if page.url %}<meta property="og:url" content="{{ page.url | prepend: site.url }}">{% endif %} -->
+    <!-- {% if page.image %} -->
+    <!-- <meta property="og:image" content="{{ page.image }}"> -->
+    <!-- {% endif %} -->
+
+    <!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
+    <!-- <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> -->
+    <!-- <link rel="stylesheet" href="{{ " /css/style.css" | prepend: site.baseurl }}"> -->
+    <!-- <link rel="stylesheet" href="{{ " /css/code.css" | prepend: site.baseurl }}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+    <nav>
+        <a class="-title" href="{{ site.baseurl }}/">
+            <!-- <div class="logo">
+            </div> -->
+        </a>
+        {% for page in site.pages %}
+        {% unless page.exclude %}
+        {% if page.title %}
+        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+        {% endunless %}
+        {% endfor %}
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>
+
+            <a href="https://github.com/lesterzone">
+                <i class="fa fa-github"></i> lesterzone
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
