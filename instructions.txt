@@ -1,0 +1,10 @@
+jekyll and docker
+https://github.com/envygeeks/jekyll-docker/blob/master/README.md
+
+jekyll on mac
+https://jekyllrb.com/docs/installation/macos/
+
+jekyll on local with docker
+https://blog.chuckstechtalk.com/software/2020/03/31/easy-jekyll-github-pages-blog-with-docker.html
+
+Just removed vscode section on docker-compose.yml
